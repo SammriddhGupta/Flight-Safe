@@ -12,7 +12,7 @@ const App = () => {
   const [filters, setFilters] = useState({ carryOn: "", checked: "" });
 
   const fetchData = async () => {
-    const q = query(collection(db, "tsa_rules_new"));
+    const q = query(collection(db, "tsa_rules_all"));
     const querySnapshot = await getDocs(q);
     const data = querySnapshot.docs.map((doc) => doc.data());
     setResults(data);
@@ -45,25 +45,23 @@ const App = () => {
   });
 
   return (
-    <div className="p-4">
-      {/* Centered Title */}
-          <h1 className="text-4xl font-extrabold mb-6 text-center text-gradient bg-gradient-to-r from-blue-500 to-green-400 inline-block text-transparent bg-clip-text">
-            Stay Flight Safe
-          </h1>
+    <div>
+      <div className="p-4">
 
-      <h1 className="text-4xl font-extrabold mb-6 text-center ">Stay Flight Safe</h1>
+          <h1 className="text-4xl font-extrabold mb-6 text-center bg-gradient-to-r from-blue-500 to-green-400 text-transparent bg-clip-text">Stay Flight Safe</h1>
 
-      <div className="flex flex-col items-center mb-6">
-        <Search onSearch={handleSearch} /> 
-        <Filters
-          onFilter={handleFilter}
-          onClearFilters={handleClearFilters}
-          filters={filters}
-        />
-      </div>
+          <div className="flex flex-col items-center mb-6">
+            <Search onSearch={handleSearch} /> 
+            <Filters
+              onFilter={handleFilter}
+              onClearFilters={handleClearFilters}
+              filters={filters}
+            />
+          </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
-        <Results results={filteredResults} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+            <Results results={filteredResults} />
+          </div>
       </div>
 
       <footer className="mt-10 py-4 text-center bg-gray-100 text-gray-600 border-t">
