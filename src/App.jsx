@@ -12,7 +12,7 @@ const App = () => {
   const [filters, setFilters] = useState({ carryOn: "", checked: "" });
 
   const fetchData = async () => {
-    const q = query(collection(db, "tsa_rules_new"));
+    const q = query(collection(db, "tsa_rules_all"));
     const querySnapshot = await getDocs(q);
     const data = querySnapshot.docs.map((doc) => doc.data());
     setResults(data);
