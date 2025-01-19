@@ -1,8 +1,16 @@
-# React + Vite
+# Stay Flight Safe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application to help users easily check what items are allowed or prohibited on flights. The app supports search, filters, and detailed item information to ensure a smooth packing experience.
 
-Currently, two official plugins are available:
+## Features
+- **Search:** Quickly look up specific items.
+- **Filters:** Check if items are allowed in carry-on or checked luggage.
+- **Detailed Information:** Links to official TSA or related resources for more details.
+- **Responsive Design:** Works seamlessly across devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Source 
+- Currently uses data from the TSA website 
+- More sources and more airlines plus country-wise details to be added soon
+
+#### Credits
+Favicon: <a href="https://www.flaticon.com/free-icons/flight-security" title="flight security icons">Flight security icons created by Vectorsclub - Flaticon</a>
